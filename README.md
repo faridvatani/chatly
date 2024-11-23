@@ -2,6 +2,25 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+In This project, I work with Edge Runtime and retrieval augmented generation.
+
+
+## Tech Stack
+- Next.js
+- Typescript
+- Clerk Auth
+- Drizzle ORM + Neon DB
+- Stripe
+
+## AI Tech Stack
+- PineconeDB
+- Langchain
+- Open AI
+- Vercel AI SDK
+
+
+
+
 ## Getting Started
 
 First, run the development server:
