@@ -8,7 +8,7 @@ export default async function Home() {
   const isAuth = !!userId;
   return (
     <section className="relative flex justify-center items-center h-full w-full">
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center gap-3">
         <div className="flex items-center">
           <h1 className="mr-3 text-white text-7xl font-semibold">
             Chat with any PDF
