@@ -2,7 +2,7 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-In This project, I work with Edge Runtime and retrieval augmented generation.
+In This project, I work with Edge Runtime and retrieval augmented generation (RAG).
 
 ## Tech Stack
 
@@ -57,6 +57,23 @@ npx drizzle-kit studio
 
 Drizzle ORM: Focuses on defining and interacting with the database schema using TypeScript.<br/>
 Drizzle Kit: Provides tools for managing database schema changes and migrations, and offers additional utilities for database interaction.
+
+## What are Vector Embeddings? 
+Vector embeddings are a way to represent data as points in a multidimensional space, where similar data points cluster together. This compact representation captures the semantic relationships and similarities between data points, making it possible to perform mathematical operations and comparisons on the data.
+
+In Chatly, we use vector embeddings to enable AI-powered interactions with PDF documents. This is how retrieval augmented generation works:
+
+1. **Obtain the PDF**: The first step is to obtain the PDF.
+2. **Split and Segment**: The second step is to split and segment the PDF. Langchain helps us with this process.
+3. **Vectorize and Embed**: The third step is to vectorize and embed individual documents.
+4. **Store Vectors**: The fourth step is to store the vectors into PineconeDB.
+5. **Search the PDF**: We then try to search the PDF as a query.
+6. **Embed the Query**: The fifth step is to embed the query.
+7. **Query PineconeDB**: The sixth step is to query PineconeDB for similar vectors.
+8. **Extract Metadata**: The seventh step is to extract the metadata of the similar vectors.
+9. **Feed Metadata into OpenAI**: The eighth step is to feed the metadata into an OpenAI prompt.
+
+This process allows the AI to understand and retrieve relevant information from the document, making it possible to chat with the AI about the content of the PDF.
 
 ## Learn More
 
