@@ -4,8 +4,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 In This project, I work with Edge Runtime and retrieval augmented generation.
 
-
 ## Tech Stack
+
 - Next.js
 - Typescript
 - Clerk Auth
@@ -13,13 +13,11 @@ In This project, I work with Edge Runtime and retrieval augmented generation.
 - Stripe
 
 ## AI Tech Stack
+
 - PineconeDB
 - Langchain
 - Open AI
 - Vercel AI SDK
-
-
-
 
 ## Getting Started
 
@@ -40,6 +38,25 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+### Applying changes to the database
+
+You can directly apply changes to your database using the drizzle-kit push command. This is a convenient method for quickly testing new schema designs or modifications in a local development environment, allowing for rapid iterations without the need to manage migration files:
+
+```
+npx drizzle-kit push
+```
+
+### Browsing the database
+
+You can browse your database using the drizzle-kit studio command. This will open a web-based interface that allows you to interact with your database, view data, and run queries:
+
+```
+npx drizzle-kit studio
+```
+
+Drizzle ORM: Focuses on defining and interacting with the database schema using TypeScript.<br/>
+Drizzle Kit: Provides tools for managing database schema changes and migrations, and offers additional utilities for database interaction.
 
 ## Learn More
 

@@ -13,9 +13,12 @@
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.4",
     "lucide": "^0.460.0",
     "lucide-react": "^0.460.0",
     "next": "15.0.3",
+    "pg": "^8.13.1",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
     "tailwind-merge": "^2.5.4",
@@ -23,12 +26,15 @@
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "drizzle-kit": "^0.28.1",
     "eslint": "^9.15.0",
     "eslint-config-next": "15.0.3",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   }
 }
