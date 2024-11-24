@@ -1,4 +1,5 @@
 "use client";
+import { UploadFile } from "@/lib/config/storage";
 import { Inbox } from "lucide-react";
 import React from "react";
 import { useDropzone } from "react-dropzone";
@@ -7,8 +8,16 @@ const Dropzone = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: { "application/pdf": [".pdf"] },
     maxFiles: 1,
-    onDrop: (acceptedFiles) => {
-      console.log(acceptedFiles);
+    onDrop: async (acceptedFiles) => {
+      // console.log(acceptedFiles);
+      const file = acceptedFiles[0];
+
+      try {
+        const upload = await UploadFile(file);
+        console.log(upload);
+      } catch (error) {
+        console.log(error);
+      }
     },
   });
   return (

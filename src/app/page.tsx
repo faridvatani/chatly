@@ -12,18 +12,18 @@ export default async function Home() {
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center gap-3">
           <div className="flex items-center">
-            <h1 className="mr-3 text-white text-4xl md:text-6xl lg:text-7xl font-semibold">
+            <h1 className="text-white text-4xl sm:text-7xl font-semibold">
               Chat with any PDF
             </h1>
           </div>
-          <div className="flex mt-2">
+          <div className="flex">
             {isAuth && (
               <Button>
                 Go to Chats <ArrowRight className="ml-2" />
               </Button>
             )}
           </div>
-          <p className="max-w-xl mt-1 text-base lg:text-lg text-slate-200">
+          <p className="max-w-xl mt-1 text-base sm:text-lg text-slate-200">
             Join millions of students, researchers and professionals to
             instantly answer questions and understand research with AI
           </p>
