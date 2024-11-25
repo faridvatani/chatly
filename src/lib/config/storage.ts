@@ -5,16 +5,13 @@ const endpoint = process.env.NEXT_PUBLIC_STORAGE_ENDPOINT,
   accessKeyId = process.env.NEXT_PUBLIC_STORAGE_ACCESS_KEY,
   secretAccessKey = process.env.NEXT_PUBLIC_STORAGE_SECRET_KEY;
 
-export async function UploadFile(file: File) {
+export async function UploadFile(
+  file: File,
+  onProgress: (progress: number) => void,
+) {
   try {
     if (!file) {
       console.log("No file selected");
-    }
-
-    if (file.size > 10 * 1024 * 1024) {
-      // bigger than 10mb!
-      console.log("File too large");
-      return;
     }
 
     const s3 = new S3({
@@ -35,10 +32,9 @@ export async function UploadFile(file: File) {
     const response = s3
       .putObject(params)
       .on("httpUploadProgress", (evt) => {
-        console.log(
-          "Uploading to storage...",
-          parseInt(((evt.loaded * 100) / evt.total).toString()) + "%",
-        );
+        const progress = parseInt(((evt.loaded * 100) / evt.total).toString());
+        onProgress(progress);
+        // console.log("Uploading to storage...", progress + "%");
       })
       .promise();
 

@@ -8,6 +8,7 @@ In This project, I work with Edge Runtime and retrieval augmented generation (RA
 
 - Next.js
 - Typescript
+- TanStack Query
 - Clerk Auth
 - Drizzle ORM + Neon DB
 - Stripe
